@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -54,9 +54,11 @@ export function HoverBorderGradient({
       }, duration * 1000);
       return () => clearInterval(interval);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hovered]);
   return (
     <Tag
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       onMouseEnter={(event: React.MouseEvent<HTMLDivElement>) => {
         setHovered(true);
       }}

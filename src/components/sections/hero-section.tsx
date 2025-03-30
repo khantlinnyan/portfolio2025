@@ -4,7 +4,6 @@ import AnimatedParagraph from "../animation/animated-paragraph";
 import { FlipWords } from "../animation/flip-words";
 import TimeLocation from "../ui/time-location";
 import { Letter } from "../animation/gibberish-text";
-import Aurora from "../../../Aurora/Aurora";
 
 const words = ["frontend", "backend", "mobile"];
 const text = "Khant Lin Nyan";

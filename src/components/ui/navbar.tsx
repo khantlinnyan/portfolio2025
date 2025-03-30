@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 // import logo from "@/public/logo.png";
 // import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa6";

@@ -24,6 +24,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
 }) => {
   const textRef = React.useRef<HTMLHeadingElement>(null);
   const inView = useInView(textRef, { once: false, margin: "-20%" });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const controls = useAnimation();
 
   const splitText = useMemo(() => {

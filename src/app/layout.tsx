@@ -3,7 +3,6 @@ import { Manrope, Montserrat } from "next/font/google";
 import "./globals.css";
 import PageTransitionWrapper from "@/components/animation/page-transition-wrapper";
 import Navbar from "@/components/ui/navbar";
-import { ScrollProvider } from "@/context/scroll-context-provider";
 
 const marope = Manrope({
   variable: "--font-manrope",

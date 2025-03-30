@@ -3,13 +3,11 @@ import React, { useState, useEffect } from "react";
 import { format } from "date-fns-tz";
 
 function SurabayaClock() {
-  const [currentTime, setCurrentTime] = useState(null);
+  const [currentTime, setCurrentTime] = useState<Date | null>(null);
 
   useEffect(() => {}, []);
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
+    const intervalId = setInterval(() => setCurrentTime(new Date()), 1000);
 
     return () => clearInterval(intervalId);
   }, []);

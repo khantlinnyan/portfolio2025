@@ -1,7 +1,6 @@
 "use client";
 import { memo } from "react";
-import { CardContainer, CardBody, CardItem } from "./3d-card";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { HoverBorderGradient } from "./hover-border-gradient";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -9,15 +8,19 @@ import { ArrowRight } from "lucide-react";
 type Props = {
   project: {
     title: string;
+
     description: string;
-    image: string;
+
+    image: StaticImageData;
   };
+
   index: number;
 };
+
 export const ProjectCard = memo(({ project, index }: Props) => (
   <div key={`card-${index}-${project.title}`} className="flex-shrink-0">
     <div className="inter-var h-full">
-      <div className="relative h-96 w-96 rounded-xl pb-4 px-4 md:pb-6 md:px-6 lg:w-3xl  h-full flex flex-col ">
+      <div className="relative h-96 w-96 rounded-xl pb-4 px-4 md:pb-6 md:px-6 lg:w-3xl  lg:h-full flex flex-col ">
         <div className="w-full my-4 flex-grow">
           <Image
             src={project.image}

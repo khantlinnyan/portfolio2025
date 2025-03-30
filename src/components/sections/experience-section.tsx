@@ -1,5 +1,4 @@
 import Image from "next/image";
-import HeroSectionAnimation from "../animation/hero-section-animation";
 import { Container } from "../ui/container";
 import Heading from "../ui/heading";
 import HysanLogo from "@/../public/images/hysan.png";
