@@ -11,7 +11,7 @@ const PageTransitionWrapper = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <AnimatePresence>
-      <motion.div
+      <motion.section
         key={router}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -19,7 +19,7 @@ const PageTransitionWrapper = ({ children }: { children: React.ReactNode }) => {
         transition={{ duration: 0.5 }}
       >
         {children}
-      </motion.div>
+      </motion.section>
     </AnimatePresence>
   );
 };
