@@ -59,7 +59,7 @@ const ExperienceSection = () => {
             <Image
               src={exp.img}
               alt={exp.company}
-              className="bg-neutral-100 z-30 w-14 aspect-square object-contain rounded-lg"
+              className="bg-neutral-50 z-30 w-14 aspect-square object-contain rounded-lg"
               width={80}
               height={80}
             />

@@ -1,5 +1,6 @@
 import { AboutSection } from "@/components/sections/about-section";
 import ExperienceSection from "@/components/sections/experience-section";
+import FeedbackSection from "@/components/sections/feedback-section";
 import HeroSection from "@/components/sections/hero-section";
 import HonorSection from "@/components/sections/honor-section";
 import SkillSection from "@/components/sections/skill-section";
@@ -17,6 +18,7 @@ const page = () => {
       <ExperienceSection />
       <SkillSection />
       <HonorSection />
+      <FeedbackSection />
     </>
   );
 };

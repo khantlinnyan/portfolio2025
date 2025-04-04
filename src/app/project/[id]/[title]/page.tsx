@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import kala from "@/../public/images/kalasa.png";
 
 const page = () => {
   // const { id, title } = useParams();
@@ -19,9 +20,11 @@ const page = () => {
         <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden mb-8">
           {/* Replace with your project image */}
           <Image
-            src="/project-placeholder.jpg"
+            src={kala}
             alt={"tok"}
             className="w-full h-full object-cover"
+            width={600}
+            height={600}
           />
         </div>
 

@@ -85,7 +85,7 @@ export default function SkillSection() {
   );
 
   return (
-    <Container className="mt-30">
+    <Container className="mt-30 lg:mt-40">
       <Heading
         title="THE INGREDIENTS"
         className="mb-12"

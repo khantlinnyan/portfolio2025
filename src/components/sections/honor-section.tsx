@@ -1,3 +1,4 @@
+import FadeInOut from "../animation/fadein-out";
 import { Container } from "../ui/container";
 import Heading from "../ui/heading";
 
@@ -32,18 +33,20 @@ const HonorSection = () => {
         subTitle="[Awards & Recognitions]"
         className="mt-20"
       />
-      <div className="grid grid-cols-2 gap-x-10 gap-y-12 mt-10 lg:grid-cols-4">
-        {Awards.map((award) => (
-          <div key={award.id}>
-            <h3 className="text-zinc-800 text-base lg:text-xl font-medium">
-              {award.title}
-            </h3>
-            <p className="text-zinc-600 text-sm lg:text-lg">
-              {award.competation}
-            </p>
-          </div>
-        ))}
-      </div>
+      <FadeInOut>
+        <div className="grid grid-cols-2 gap-x-10 gap-y-12 mt-10 lg:grid-cols-4">
+          {Awards.map((award) => (
+            <div key={award.id}>
+              <h3 className="text-zinc-800 text-base lg:text-xl font-medium">
+                {award.title}
+              </h3>
+              <p className="text-zinc-600 text-sm lg:text-lg">
+                {award.competation}
+              </p>
+            </div>
+          ))}
+        </div>
+      </FadeInOut>
     </Container>
   );
 };

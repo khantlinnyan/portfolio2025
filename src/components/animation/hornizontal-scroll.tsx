@@ -24,8 +24,7 @@ const HorizontalScroll = () => {
   const win = typeof window !== "undefined" ? window.innerWidth : 200;
   const targetRef = useRef(null);
 
-  // Dynamically calculate section height based on the number of projects
-  const sectionHeight = projects.length * 150; // 100vh per project, adjust as needed
+  const sectionHeight = projects.length * 200;
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -33,12 +32,12 @@ const HorizontalScroll = () => {
   });
 
   const scrollSpring = useSpring(scrollYProgress, {
-    stiffness: 60, // Reduced for smoother animation
-    damping: 25, // Slightly increased for smoother easing
+    stiffness: 60,
+    damping: 25,
     restDelta: 0.001,
   });
 
-  const isMobile = win <= 768; // Adjust breakpoint as needed
+  const isMobile = win <= 768;
   const x = useTransform(
     scrollSpring,
     [0, 1],
@@ -56,7 +55,7 @@ const HorizontalScroll = () => {
       style={{ height: `${sectionHeight}vh` }}
     >
       <Heading
-        className="sticky top-16 right-8"
+        className="sticky top-8 lg:top-16 right-8"
         title="SIGNATURE DISHES"
         subTitle="[Selected work]"
       />
