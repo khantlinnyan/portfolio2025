@@ -2,7 +2,6 @@ import { Container } from "../ui/container";
 import Heading from "../ui/heading";
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/animation/marquee";
-import Image from "next/image";
 
 const reviews = [
   {
@@ -43,11 +42,11 @@ const reviews = [
   },
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 3);
-const secondRow = reviews.slice(reviews.length / 2);
+// const firstRow = reviews.slice(0, reviews.length / 3);
+// const secondRow = reviews.slice(reviews.length / 2);
 
 const ReviewCard = ({
-  img,
+  //   img,
   name,
   username,
   body,
@@ -68,7 +67,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        {/* <img className="rounded-full" width="32" height="32" alt="" src={img} /> */}
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -92,11 +91,7 @@ function MarqueeDemo() {
         className="py-2 md:py-4" // Responsive padding
       >
         {reviews.map((review) => (
-          <ReviewCard
-            key={review.username}
-            {...review}
-            className="w-56 md:w-64" // Responsive card size
-          />
+          <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
 
