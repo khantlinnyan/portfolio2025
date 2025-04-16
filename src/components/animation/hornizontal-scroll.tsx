@@ -18,14 +18,14 @@ const projects = [
     id: 2,
     image: zaySine,
     title: "Zay Sine",
-    description: "A platform to showcase and sell art pieces",
+    description: "Point of sale system for small businesses",
     link: "",
   },
   {
     id: 3,
     image: theHive,
     title: "The Hive",
-    description: "A platform to showcase and sell art pieces",
+    description: "A Portfolio website for a youth non-profit organization",
     link: "https://www.beesinthehive.org",
   },
 ];
