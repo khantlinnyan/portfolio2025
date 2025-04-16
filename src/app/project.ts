@@ -71,7 +71,7 @@ export const projects: Project[] = [
       "The Hive is a youth-led nonprofit organization based in Myanmar, focused on empowering young people through free educational resources, skill-building workshops, and community-driven initiatives. The organization offers a wide range of programs, including IGCSE revision classes, personal growth webinars, and student-led podcasts—creating a safe and inclusive space where youth can learn, grow, and lead.",
     headingComponent: theHiveHeading,
     about:
-      "As Head of Tech and Frontend Developer, I lead the design and development of the Hive’s portfolio website, ensuring a seamless and accessible experience for students, volunteers, and the broader community. I oversee the technical infrastructure, maintain the website, and collaborate with the creative and academic teams to bring ideas to life through clean, responsive UI/UX design. My work supports the organization's mission by making educational resources more reachable and impactful for youth across Myanmar.",
+      "As Head of Tech and Frontend Developer, I lead the design and development of the Hive’s portfolio website. I oversee the technical infrastructure, maintain the website, and collaborate with the creative and academic teams to bring ideas to life through clean, responsive UI/UX design.",
     point: {
       client: "The Hive",
       year: "2024",
