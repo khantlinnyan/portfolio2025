@@ -1,31 +1,30 @@
 "use client";
 import React, { useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
-// import logo from "@/public/logo.png";
-// import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa6";
-// import { FaDiscord } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
+
 import Link from "next/link";
 
 const MOBILE_NAV_ITEMS = [
   {
     id: 0,
     navTitle: "home.",
-    to: "/",
+    to: "#",
   },
   {
     id: 1,
-    navTitle: "about us.",
-    to: "/about",
+    navTitle: "about.",
+    to: "#about",
   },
   {
     id: 2,
-    navTitle: "events.",
-    to: "/events",
+    navTitle: "work.",
+    to: "#work",
   },
   {
     id: 3,
-    navTitle: "classes.",
-    to: "/classes",
+    navTitle: "experience.",
+    to: "#exp",
   },
 ];
 
@@ -150,12 +149,10 @@ const Navbar = () => {
       >
         <div className="overflow-hidden mix-blend-difference bg-transparent ">
           <Link href={"/"} scroll={true}>
-            <motion.h1
+            <motion.div
               variants={hideNavItemsVariant}
-              className="font-mono  text-zinc-900 tracking-tight font-medium text-base lg:text-2xl"
-            >
-              linxnext
-            </motion.h1>
+              className="font-mono  bg-primary size-6 lg:size-12 rounded-full cursor-pointer"
+            ></motion.div>
           </Link>
         </div>
         <div className="overflow-hidden">
@@ -180,32 +177,32 @@ const Navbar = () => {
           </motion.button>
 
           <div className="flex w-full lg:flex-row justify-between flex-col-reverse lg:ml-10 h-5/6 lg:items-center ">
-            {/* <motion.ul
+            <motion.ul
               className="px-5 lg:self-end flex lg:flex-col gap-4"
               variants={liVariant}
             >
-              <Link href="https://www.facebook.com/profile.php?id=61550785031884&mibextid=ZbWKwL">
+              <Link href="https://www.facebook.com/khant.l.nyan.7">
                 <FaFacebook
                   color={"rgb(82 82 91)"}
                   className="text-3xl lg:text-4xl"
                 />
-              </Link> */}
-            {/* <Link href="/">
+              </Link>
+              <Link href="https://www.instagram.com/linxnext">
                 <FaInstagram color={"rgb(82 82 91)"} size={28} />
-              </Link> */}
-            {/* <Link href="https://discord.gg/7H7VBWY6vf">
-                <FaDiscord
+              </Link>
+              <Link href="https://www.linkedin.com/in/khant-lin-nyan-233325287/">
+                <FaLinkedin
                   color={"rgb(82 82 91)"}
                   className="text-3xl lg:text-4xl"
                 />
               </Link>
-              <Link href="https://t.me/+pnU0fIZ6MV5iODE9">
+              {/* <Link href="https://t.me/+pnU0fIZ6MV5iODE9">
                 <FaTelegram
                   color={"rgb(82 82 91)"}
                   className="text-3xl lg:text-4xl"
                 />
-              </Link>
-            </motion.ul> */}
+              </Link> */}
+            </motion.ul>
             <motion.ul variants={ulVariant} className="list-none px-6 w-full ">
               {MOBILE_NAV_ITEMS.map((navItem) => (
                 <Link

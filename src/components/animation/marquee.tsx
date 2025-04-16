@@ -33,8 +33,6 @@ export const Marquee = ({
   const x = useMotionValue(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
-  // 1. Check for mobile/touch devices
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768 || "ontouchstart" in window);
@@ -44,14 +42,12 @@ export const Marquee = ({
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // 2. Track visibility and scroll
   const isInView = useInView(containerRef, { amount: 0.1 });
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
   });
 
-  // 3. Calculate responsive speed
   const responsiveBaseSpeed = isMobile ? mobileBaseSpeed : baseSpeed;
   const dynamicSpeed = useTransform(
     scrollYProgress,
@@ -59,7 +55,6 @@ export const Marquee = ({
     [responsiveBaseSpeed, responsiveBaseSpeed * (1 + scrollSpeedFactor)]
   );
 
-  // 4. Animation loop
   useEffect(() => {
     if (!isInView || !contentRef.current) return;
 
@@ -75,14 +70,12 @@ export const Marquee = ({
 
       if (animationStop) return;
 
-      // Pause logic (only for non-touch devices)
       if (!(pauseOnHover && isHovered && !isMobile)) {
         currentSpeed = dynamicSpeed.get();
       }
 
       x.set(x.get() - currentSpeed * deltaTime * 0.1);
 
-      // Responsive looping
       if (Math.abs(x.get()) >= contentWidth) {
         x.set(0);
       }

@@ -3,20 +3,30 @@ import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import { useRef } from "react";
 import kalasaImg from "@/../public/images/kalasa.png";
 import zaySine from "@/../public/images/zaysine.png";
+import theHive from "@/../public/images/thehive.png";
 import Heading from "../ui/heading";
 import { ProjectCard } from "../ui/project-card";
 const projects = [
   {
+    id: 1,
     image: kalasaImg,
     title: "Kalasa Art Gallery",
     description: "A platform to showcase and sell art pieces",
     link: "https://kalasaartgallery.com",
   },
   {
+    id: 2,
     image: zaySine,
     title: "Zay Sine",
     description: "A platform to showcase and sell art pieces",
     link: "",
+  },
+  {
+    id: 3,
+    image: theHive,
+    title: "The Hive",
+    description: "A platform to showcase and sell art pieces",
+    link: "https://www.beesinthehive.org",
   },
 ];
 
@@ -24,7 +34,7 @@ const HorizontalScroll = () => {
   const win = typeof window !== "undefined" ? window.innerWidth : 200;
   const targetRef = useRef(null);
 
-  const sectionHeight = projects.length * 200;
+  const sectionHeight = projects.length * 120;
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -41,12 +51,8 @@ const HorizontalScroll = () => {
   const x = useTransform(
     scrollSpring,
     [0, 1],
-    isMobile
-      ? [win / 2, -win * 1.6] // Mobile: Larger range for more movement
-      : [win / 2, -win * 0.8]
+    isMobile ? [win / 1.2, -win * 3] : [win / 2, -win * 1]
   );
-
-  // const x = useTransform(scrollSpring, [0, 1], [win / 2, -win * 2]);
 
   return (
     <section

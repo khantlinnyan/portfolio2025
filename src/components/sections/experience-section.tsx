@@ -47,7 +47,7 @@ const experience = [
 ];
 const ExperienceSection = () => {
   return (
-    <Container className="mt-0 lg:mt-40">
+    <Container className="mt-0 lg:mt-40" id="exp">
       <Heading
         title="COOKING JOURNEY"
         subTitle="[Expreience]"

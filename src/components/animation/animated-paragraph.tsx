@@ -36,7 +36,7 @@ const Paragraph: React.FC<ParagraphProps> = ({ paragraph }) => {
   const targetRef = nextSectionRef ?? createRef<HTMLElement>();
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: [0, 0.6],
+    offset: [0, 0.19],
   });
   console.log(scrollYProgress);
 

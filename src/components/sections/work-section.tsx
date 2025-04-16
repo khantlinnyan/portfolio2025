@@ -9,7 +9,7 @@ const HorizontalScroll = dynamic(
 
 const WorkSection = () => {
   return (
-    <Container className="bg-white h-full">
+    <Container className="bg-white h-full" id="work">
       <HorizontalScroll />
     </Container>
   );

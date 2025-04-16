@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 
 export const AboutSection = () => {
   return (
-    <Container className="bg-white lg:pb-80 pb-40 h-full">
+    <Container className="bg-white lg:pb-80 pb-40 h-full" id="about">
       <Heading
         title="the guy who is cookin"
         className="mb-12"
@@ -30,18 +30,19 @@ export const AboutSection = () => {
         <div className="place-self-end mt-20 lg:mt-32 w-full pr-1">
           <FadeInOut>
             <p className="lg:text-4xl text-xl w-full leading-snug  text-zinc-800 ">
-              Hi, I&apos;m Khant Lin Nyan, a developer passionate about creating
-              clean, user-friendly digital experiences. I specialize in blending
-              technology and creativity to build functional and impactful
-              solutions. With a focus on simplicity and usability,
+              Hi, I&apos;m developer with over 3 years of experience ,
+              passionate about creating clean, user-friendly digital
+              experiences. I specialize in blending technology and creativity to
+              build functional and impactful solutions. With a focus on
+              simplicity and usability,
             </p>
           </FadeInOut>
           <FadeInOut>
             <p className="lg:text-4xl text-xl w-full leading-snug  text-zinc-800 mt-4 lg:mt-5">
               Whether through coding, collaboration, hackathons, or volunteering
-              with youth empowerment organizations, I&apos;m passionate about
-              creating meaningful solutions that resonate with users and
-              positively impact communities.
+              with youth empowerment organizations, creating meaningful
+              solutions that resonate with users and positively impact
+              communities.
             </p>
           </FadeInOut>
           <FadeInOut>

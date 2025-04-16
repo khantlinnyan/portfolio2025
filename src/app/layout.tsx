@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Manrope, Montserrat } from "next/font/google";
 import "./globals.css";
-import PageTransitionWrapper from "@/components/animation/page-transition-wrapper";
 import Navbar from "@/components/ui/navbar";
 import SmoothScroll from "@/components/animation/smooth-scroll";
+import Footer from "@/components/sections/footer";
 
 const marope = Manrope({
   variable: "--font-manrope",
@@ -32,12 +32,13 @@ export default function RootLayout({
       <body
         className={`${marope.className} ${montserrat.variable} antialiased overflow-x-hidden`}
       >
+        {/* <PageTransitionWrapper> */}
         <SmoothScroll>
-          <PageTransitionWrapper>
-            <Navbar />
-            {children}
-          </PageTransitionWrapper>
+          <Navbar />
+          {children}
+          <Footer />
         </SmoothScroll>
+        {/* </PageTransitionWrapper> */}
       </body>
     </html>
   );
