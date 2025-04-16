@@ -140,7 +140,7 @@ export default function ProjectClient({
               className="flex justify-center flex-col gap-4 items-center"
               key={project.point.id}
             >
-              <div className="border-b py-4 grid grid-cols-2 text-zinc-700   w-full items-center justify-center text-sm lg:text-base">
+              <div className="border-b py-4 grid grid-cols-2 text-zinc-700 mt-12  w-full items-center justify-center text-sm lg:text-base">
                 <p>Client: </p>
                 <p className="text-start">{project.point.client}</p>
               </div>
@@ -174,12 +174,12 @@ export default function ProjectClient({
           </div>
         </div>
 
-        <div className="absolute  top-[45%]  lg:top-[35%] flex gap-2  left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute  top-[55%]  lg:top-[55%] flex gap-2  left-1/2 -translate-x-1/2 -translate-y-1/2">
           <p className="text-zinc-600 font-medium">Scroll to Next Project</p>
           <ArrowDownCircle color="#c6c6be" />
         </div>
 
-        <div className="next-project-progress absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bottom-[50%] w-1/2 h-[4px] bg-[#c6c6be] overflow-hidden">
+        <div className="next-project-progress absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bottom-[40%] w-1/2 h-[4px] bg-[#c6c6be] overflow-hidden">
           <motion.div
             className="next-project-progress-bar w-full h-full bg-black origin-left"
             style={{ scaleX: footerProgressBarScale }}
