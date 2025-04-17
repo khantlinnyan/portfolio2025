@@ -27,7 +27,7 @@ export const ProjectCard = memo(({ project, index }: Props) => (
         <div className="w-full my-4 flex-grow">
           <Image
             src={project.image}
-            className="w-full h-full aspect-[4/3] object-contain shadow-sm bg-[#fff] rounded-xl"
+            className="w-full h-full aspect-[4/3] object-contain shadow-2xs border bg-[#fff] rounded-xl"
             alt={project.title}
             priority={index === 0}
           />
@@ -36,7 +36,7 @@ export const ProjectCard = memo(({ project, index }: Props) => (
           {project.title}
         </div>
         <div className="flex justify-between items-center">
-          <div className="text-[#6E6E73] text-sm md:text-base max-w-sm mt-2 dark:text-neutral-300">
+          <div className="text-[#6E6E73] text-sm md:text-base max-w-sm  dark:text-neutral-300">
             {project.description}
           </div>
           <div>

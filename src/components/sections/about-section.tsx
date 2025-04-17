@@ -55,7 +55,7 @@ export const AboutSection = () => {
               duration={0.3}
               containerClassName="rounded-full flex items-center"
               as="button"
-              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              className="dark:bg-black bg-primary text-white dark:text-white flex items-center space-x-2"
             >
               <Link
                 href={"mailto:khantlinnyan.dev@gmail.com"}
