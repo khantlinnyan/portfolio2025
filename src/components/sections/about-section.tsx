@@ -3,9 +3,9 @@ import { Container } from "../ui/container";
 import FadeInOut from "../animation/fadein-out";
 import profile from "../../../public/images/profile2.png";
 import Heading from "../ui/heading";
-import { HoverBorderGradient } from "../ui/hover-border-gradient";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+// import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import { ArrowDown } from "lucide-react";
+import { Button } from "../ui/button";
 
 export const AboutSection = () => {
   return (
@@ -50,21 +50,25 @@ export const AboutSection = () => {
               Let&apos;s create something extraordinary together!
             </p>
           </FadeInOut>
+
           <FadeInOut className="mt-5">
-            <HoverBorderGradient
-              duration={0.3}
-              containerClassName="rounded-full flex items-center"
-              as="button"
-              className="dark:bg-black bg-primary text-white dark:text-white flex items-center space-x-2"
+            <Button
+              // duration={0.3}
+              // containerClassName="rounded-full bg-transparent flex items-center"
+              // as="button"
+              className="dark:bg-black bg-transparent rounded-full border border-primary dark:text-white flex items-center space-x-2 text-primary py-5 px-10 lg:py-6 lg:px-12  ease-in hover:bg-primary hover:text-white duration-200 transition-all"
             >
-              <Link
-                href={"mailto:khantlinnyan.dev@gmail.com"}
-                className="text-sm lg:text-xl"
+              <a
+                href={"/khantlinnyan.prof.resume.pdf"}
+                className="text-sm lg:text-xl "
+                target="_blank"
+                rel="noopener noreferrer"
+                download
               >
-                Connect
-              </Link>
-              <ArrowRight strokeWidth={1} />
-            </HoverBorderGradient>
+                Resume
+              </a>
+              <ArrowDown width={16} />
+            </Button>
           </FadeInOut>
         </div>
       </div>
